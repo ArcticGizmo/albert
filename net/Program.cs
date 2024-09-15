@@ -1,4 +1,4 @@
-﻿using Albert.Lib;
+﻿using Albert.Lib.Schemas;
 
 new StringSchema().ValidateAndLog("apples");
 new StringSchema().Min(5).ValidateAndLog("a");

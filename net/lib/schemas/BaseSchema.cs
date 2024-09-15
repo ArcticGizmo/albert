@@ -1,6 +1,7 @@
 using System.Text.Json;
+using Albert.Lib.Rules;
 
-namespace Albert.Lib;
+namespace Albert.Lib.Schemas;
 
 public abstract class BaseSchema<T>
 {
@@ -34,39 +35,5 @@ public abstract class BaseSchema<T>
     {
         var errors = Validate(value);
         Console.WriteLine(JsonSerializer.Serialize(errors, _jsonOptions));
-    }
-}
-
-public class StringSchema : BaseSchema<string>
-{
-    public override string Type => "string";
-
-    public StringSchema Min(int min)
-    {
-        this.AddRule(new StringMinRule(min));
-        return this;
-    }
-
-    public StringSchema Max(int max)
-    {
-        this.AddRule(new StringMaxRule(max));
-        return this;
-    }
-}
-
-public class NumberSchema : BaseSchema<int>
-{
-    public override string Type => "string";
-
-    public NumberSchema Min(int min)
-    {
-        this.AddRule(new NumberMinRule(min));
-        return this;
-    }
-
-    public NumberSchema Max(int max)
-    {
-        this.AddRule(new NumberMaxRule(max));
-        return this;
     }
 }
