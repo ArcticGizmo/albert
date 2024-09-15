@@ -3,7 +3,7 @@ import { BaseSchema } from './BaseSchema';
 
 export class BooleanSchema extends BaseSchema<boolean> {
   constructor() {
-    super('number');
+    super('boolean');
   }
 
   true() {
