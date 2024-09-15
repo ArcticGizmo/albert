@@ -16,7 +16,6 @@ export class StringMinRule implements BaseRule<string> {
   }
 }
 
-
 export class StringMaxRule implements BaseRule<string> {
   private _max: number;
   constructor(max: number) {

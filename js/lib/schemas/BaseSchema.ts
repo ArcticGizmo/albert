@@ -19,7 +19,6 @@ export abstract class BaseSchema<T> {
     const errors: ValidationError[] = [];
     for (const rule of this.rules) {
       if (!rule.validate(value)) {
-        // TODO: how to get a path?
         errors.push(new ValidationError(rule.errorMessage(), path));
       }
     }

@@ -15,7 +15,7 @@ import { StringSchema, NumberSchema, BooleanSchema, ObjectSchema, ArraySchema } 
 //   banana: new NumberSchema().min(5)
 // }).validateAndLog({ apple: '7', banana: 2 });
 
-new ArraySchema(new StringSchema().min(5)).validateAndLog([]);
+new ArraySchema(new StringSchema()).min(2).validateAndLog([]);
 new ArraySchema(new StringSchema().min(5)).validateAndLog(['ee']);
 
 // yup.object();
