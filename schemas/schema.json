@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "firstName": {
+            "type": "string",
+            "min": 0,
+            "max": 10,
+            "regex": "xxxx",
+            "email": "xxxx",
+            "url": "xxxx",
+            "required": true
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "age": {
+            "type": "number",
+            "min": 18
+        },
+        "favouriteFruits": {
+            "type": "array",
+            "itemType": "string"
+        },
+        "favouriteNumbers": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "max": 4
+            },
+            "min": 0
+        },
+        "someTuple": {
+            "type": "tuple",
+            "items": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        }
+    }
+}
